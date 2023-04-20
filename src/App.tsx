@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useProductData } from "./Context/ProductsDataContext/ProductDataProvider";
 import { chooseRandomData } from "./helpers/chooseRandomData";
+import appLogo from "./assets/logo-zevi.png";
+
+import "./App.css";
+import SearchBox from "./components/SearchBox/SearchBox";
 
 function App() {
   const { productDispatch } = useProductData();
@@ -25,7 +29,14 @@ function App() {
     })();
   }, []);
 
-  return <div className="App">Hello from Search Product</div>;
+  return (
+    <div className="app">
+      <div className="app-logo">
+        <img src={appLogo} alt="logo" />
+      </div>
+      <SearchBox />
+    </div>
+  );
 }
 
 export default App;
