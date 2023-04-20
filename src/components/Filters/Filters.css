@@ -1,0 +1,52 @@
+.filters-container {
+  width: 60%;
+  position: sticky;
+  top: 5rem;
+  height: 80vh;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+.filter-header {
+  font-size: 20px;
+}
+
+.reset-filters {
+  color: blue;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.brand-filter-top-header {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.filter-values {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 17px;
+}
+.checkbox-field {
+  height: 1rem;
+  width: 1rem;
+  outline: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 4px;
+  position: relative;
+  top: 3px;
+}
+.star-icon {
+  color: rgb(224, 210, 16);
+  font-size: 20px;
+}
