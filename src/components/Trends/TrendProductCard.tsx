@@ -13,7 +13,16 @@ const TrendProductCard = ({ data }: Props) => {
   const navigate = useNavigate();
   return (
     <div className="trends-product-card-wrapper">
-      <div className="trends-product-card">
+      <div
+        className="trends-product-card"
+        onClick={() => {
+          navigate(`/search/${data.category}/${data.title}`);
+          filterDispatch({
+            type: "FILTER_BY_CATEGORIES",
+            payload: data.category,
+          });
+        }}
+      >
         <img src={data.image} alt="" />
         <p className="trend-product-card-title">{data.title.slice(0, 30)}</p>
       </div>

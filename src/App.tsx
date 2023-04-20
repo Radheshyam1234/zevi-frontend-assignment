@@ -7,7 +7,8 @@ import "./App.css";
 import SearchBox from "./components/SearchBox/SearchBox";
 import Trends from "./components/Trends/Trends";
 import SuggestionBox from "./components/SuggestionBox/SuggestionBox";
-import { useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   const { productDispatch } = useProductData();
@@ -53,6 +54,9 @@ function App() {
           </div>
         </div>
       ) : null}
+      <Routes>
+        <Route path="/search/:category/:productName" element={<SearchPage />} />
+      </Routes>
     </div>
   );
 }

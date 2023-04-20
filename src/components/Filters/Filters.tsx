@@ -41,7 +41,7 @@ const Filters = (props: Props) => {
         >
           <p>BRAND</p>
           <div>
-            {openBrandFilter ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+            {openBrandFilter ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
           </div>
         </div>
 
@@ -79,7 +79,7 @@ const Filters = (props: Props) => {
         >
           <p>PRICE RANGE</p>
           <div>
-            {openPriceFilter ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+            {openPriceFilter ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
           </div>
         </div>
 
@@ -130,7 +130,7 @@ const Filters = (props: Props) => {
         >
           <p>Ratings</p>
           <div>
-            {openRatingsFilter ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+            {openRatingsFilter ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
           </div>
         </div>
 

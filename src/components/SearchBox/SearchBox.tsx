@@ -6,11 +6,23 @@ import { InitialStateType } from "../../Context/ProductsDataContext/ContextType"
 import { CiSearch } from "react-icons/ci";
 import "./SearchBox.css";
 import { useFilterData } from "../../Context/FilterContext/FilterProvider";
+import { useNavigate } from "react-router";
 
 const SearchBox = ({ openSuggestionBox, setOpenSuggestionBox }: any) => {
   const { productState } = useProductData();
   const { filterDispatch } = useFilterData();
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key == "Enter") {
+      if (searchTerm !== "") navigate(`/search/${searchTerm}/${searchTerm}`);
+      filterDispatch({
+        type: "FILTER_BY_SEARCH",
+        payload: searchTerm,
+      });
+    }
+  };
 
   return (
     <div className="search-box-wrapper">
@@ -24,6 +36,9 @@ const SearchBox = ({ openSuggestionBox, setOpenSuggestionBox }: any) => {
           }}
           onChange={(e) => {
             setSearchTerm(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            handleKeyDown(e);
           }}
         ></input>
         <div
