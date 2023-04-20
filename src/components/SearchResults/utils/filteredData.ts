@@ -26,9 +26,15 @@ export const FilteredData = (productList: ProductType[]) => {
   if (applySearch) {
     ModifiedData = ModifiedData.filter(
       (product) =>
-        product.category.includes(applySearch) ||
-        product.title.includes(applySearch) ||
-        product.description.includes(applySearch)
+        product.category
+          .toLocaleLowerCase()
+          .includes(applySearch.toLocaleLowerCase()) ||
+        product.title
+          .toLocaleLowerCase()
+          .includes(applySearch.toLocaleLowerCase()) ||
+        product.description
+          .toLocaleLowerCase()
+          .includes(applySearch.toLocaleLowerCase())
     );
   }
   if (!minPrice && maxPrice) {
