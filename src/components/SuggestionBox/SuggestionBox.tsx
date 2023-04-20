@@ -19,7 +19,17 @@ const SuggestionBox = (props: Props) => {
       <div className="suggestion-container">
         {suggestedProducts?.map((product) => {
           return (
-            <p className="suggestion" key={product.id}>
+            <p
+              className="suggestion"
+              key={product.id}
+              onClick={() => {
+                navigate(`/search/${product.category}/${product.title}`);
+                filterDispatch({
+                  type: "FILTER_BY_CATEGORIES",
+                  payload: product.category,
+                });
+              }}
+            >
               {product.title}
             </p>
           );
