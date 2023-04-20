@@ -7,7 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import "./SearchBox.css";
 import { useFilterData } from "../../Context/FilterContext/FilterProvider";
 
-const SearchBox = () => {
+const SearchBox = ({ openSuggestionBox, setOpenSuggestionBox }: any) => {
   const { productState } = useProductData();
   const { filterDispatch } = useFilterData();
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,6 +19,9 @@ const SearchBox = () => {
           className="search-box-input"
           placeholder="Search"
           value={searchTerm}
+          onClick={() => {
+            setOpenSuggestionBox(!openSuggestionBox);
+          }}
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}

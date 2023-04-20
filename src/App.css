@@ -25,3 +25,11 @@ body {
   height: 60px;
   width: 60px;
 }
+
+.suggestion-trends-container {
+  padding: 2% 4%;
+  background-color: white;
+}
+.suggestion-trends-wrapper {
+  padding: 10px 12%;
+}

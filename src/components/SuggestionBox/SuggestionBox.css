@@ -1,0 +1,21 @@
+.suggestion-box-container {
+  margin-top: 60px;
+}
+.suggestion-box-heading {
+  font-size: 24px;
+}
+
+.suggestion-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.suggestion {
+  font-size: 16px;
+  color: rgb(81, 78, 78);
+  cursor: pointer;
+}
+.suggestion:hover {
+  color: rgb(46, 117, 225);
+}
