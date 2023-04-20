@@ -21,7 +21,7 @@ function App() {
         .then((data) => {
           productDispatch({
             type: "SET_ALL_PRODUCTS",
-            payload: data,
+            payload: data.sort(() => Math.random() - 0.5),
           });
           productDispatch({
             type: "SET_SUGGESTED_PRODUCTS",
