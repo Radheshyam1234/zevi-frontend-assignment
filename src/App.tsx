@@ -5,9 +5,14 @@ import appLogo from "./assets/logo-zevi.png";
 
 import "./App.css";
 import SearchBox from "./components/SearchBox/SearchBox";
+import Trends from "./components/Trends/Trends";
+import SuggestionBox from "./components/SuggestionBox/SuggestionBox";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const { productDispatch } = useProductData();
+  const [openSuggestionBox, setOpenSuggestionBox] = useState<boolean>(false);
+
   useEffect(() => {
     (async () => {
       fetch("https://fakestoreapi.com/products")
@@ -29,12 +34,25 @@ function App() {
     })();
   }, []);
 
+  const location = useLocation();
+
   return (
     <div className="app">
       <div className="app-logo">
         <img src={appLogo} alt="logo" />
       </div>
-      <SearchBox />
+      <SearchBox
+        openSuggestionBox={openSuggestionBox}
+        setOpenSuggestionBox={setOpenSuggestionBox}
+      />
+      {openSuggestionBox && location?.pathname == "/" ? (
+        <div className="suggestion-trends-wrapper">
+          <div className="suggestion-trends-container">
+            <Trends />
+            <SuggestionBox />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
