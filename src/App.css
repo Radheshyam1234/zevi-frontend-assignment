@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+body {
+  overflow-x: clip;
+}
+.app {
+  background: url("./assets/background.png");
+  width: 100vw;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.app-logo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.app-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+.suggestion-trends-container {
+  padding: 2% 4%;
+  background-color: white;
+}
+.suggestion-trends-wrapper {
+  padding: 10px 12%;
+}

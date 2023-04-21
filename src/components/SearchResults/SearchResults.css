@@ -1,0 +1,76 @@
+.search-results-card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.searchResult-card-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.searchResult-card-image-container {
+  position: relative;
+  height: 250px;
+  width: 180px;
+}
+.searchResult-card-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.searchResult-card-like {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.searchResult-card-title {
+  margin-top: 20px;
+}
+
+.searchResult-card-viewProduct-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(132, 132, 252);
+  opacity: 0.8;
+  display: none;
+}
+.searchResult-card-wrapper:hover .searchResult-card-viewProduct-container {
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.searchResult-card-prices {
+  margin-top: 8px;
+}
+
+.searchResult-card-slashed-price {
+  text-decoration: line-through;
+  color: rgb(173, 161, 161);
+}
+
+.searchResult-card-price {
+  font-weight: 800;
+  color: rgb(132, 132, 252);
+}
+.searchResult-card-rating {
+  color: rgb(224, 210, 16);
+  font-size: 20px;
+}
+.default-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  gap: 20px;
+  font-size: 20px;
+}
